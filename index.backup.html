@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T Mohamed Yaser — Full-Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<<body class="bg-dark-bg text-white font-inter overflow-x-hidden">
+    
+    <!-- Modern Navigation -->
+    <nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-dark-bg/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h3 class="text-xl font-space font-bold">
+                        <span class="text-neon-blue">T MOHAMED</span> 
+                        <span class="text-white">YASER</span>
+                    </h3>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-text-gray hover:text-neon-blue transition-colors duration-300 font-medium">Home</a>
+                        <a href="#about" class="nav-link text-text-gray hover:text-neon-blue transition-colors duration-300 font-medium">About</a>
+                        <a href="#work" class="nav-link text-text-gray hover:text-neon-blue transition-colors duration-300 font-medium">Work</a>
+                        <a href="#experience" class="nav-link text-text-gray hover:text-neon-blue transition-colors duration-300 font-medium">Experience</a>
+                        <a href="#contact" class="nav-link text-text-gray hover:text-neon-blue transition-colors duration-300 font-medium">Contact</a>
+                        <button id="download-resume" class="bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/25 flex items-center gap-2">
+                            <i class="fas fa-download"></i>
+                            <span>Resume</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-text-gray hover:text-white p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-dark-bg/95 backdrop-blur-xl border-t border-white/10">
+            <div class="px-6 pt-4 pb-6 space-y-3">
+                <a href="#home" class="block text-text-gray hover:text-neon-blue transition-colors duration-300 py-2 font-medium">Home</a>
+                <a href="#about" class="block text-text-gray hover:text-neon-blue transition-colors duration-300 py-2 font-medium">About</a>
+                <a href="#work" class="block text-text-gray hover:text-neon-blue transition-colors duration-300 py-2 font-medium">Work</a>
+                <a href="#experience" class="block text-text-gray hover:text-neon-blue transition-colors duration-300 py-2 font-medium">Experience</a>
+                <a href="#contact" class="block text-text-gray hover:text-neon-blue transition-colors duration-300 py-2 font-medium">Contact</a>
+                <button id="download-resume-mobile" class="w-full bg-gradient-to-r from-neon-blue to-blue-600 text-white px-4 py-3 rounded-full font-semibold transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fixed Center Animation Container -->
+    <div class="center-image-fixed">
+        <canvas></canvas>
+    </div>
+    
+    <div id="main" class="relative">
+        
+        <!-- Hero Section -->
+        <section id="home" data-section="home" class="relative min-h-screen flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-br from-dark-bg via-gray-900 to-dark-bg"></div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-screen">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-5 space-y-8" data-aos="fade-right" data-aos-duration="800">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 text-sm font-medium text-neon-blue">
+                            <span class="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></span>
+                            Available for opportunities
+                        </div>
+                        
+                        <h2 class="text-2xl md:text-3xl font-space font-light text-text-gray">
+                            Hi, I am <span class="text-white font-semibold">Yaser</span> 👋
+                        </h2>
+                        
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-space font-bold leading-tight">
+                            <span class="bg-gradient-to-r from-white via-neon-blue to-neon-cyan bg-clip-text text-transparent">
+                                Building Tech
+                            </span>
+                            <br>
+                            <span class="text-white">& Brands</span>
+                        </h1>
+                        
+                        <p class="text-xl text-text-gray font-light max-w-lg leading-relaxed">
+                            Full-Stack React Developer with 2+ Years Experience crafting digital experiences that make a difference
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <button class="cta-button group bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/25 flex items-center justify-center gap-3">
+                                <span>Let's work together</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </button>
+                            <button class="border border-white/20 hover:border-neon-blue text-white hover:text-neon-blue px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-neon-blue/10">
+                                View Portfolio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center space for animation -->
+                <div class="lg:col-span-2"></div>
+                
+                <!-- Right Content -->
+                <div class="lg:col-span-5 space-y-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 bg-neon-blue rounded-full animate-pulse"></div>
+                            <h3 class="text-lg font-space font-semibold text-neon-blue uppercase tracking-wider">
+                                Portfolio / 2025
+                            </h3>
+                        </div>
+                        
+                        <h2 class="text-2xl md:text-3xl font-space font-bold text-white leading-tight">
+                            I love solving problems and building things through code
+                        </h2>
+                        
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="tech-badge bg-gradient-to-br from-blue-500/20 to-neon-blue/20 border border-blue-400/30 rounded-xl px-4 py-3 text-center font-semibold text-blue-300 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                                React
+                            </div>
+                            <div class="tech-badge bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-400/30 rounded-xl px-4 py-3 text-center font-semibold text-yellow-300 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/20">
+                                JavaScript
+                            </div>
+                            <div class="tech-badge bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl px-4 py-3 text-center font-semibold text-green-300 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20">
+                                Python
+                            </div>
+                            <div class="tech-badge bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl px-4 py-3 text-center font-semibold text-purple-300 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
+                                AI/ML
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10" data-aos="fade-up" data-aos-delay="1000">
+                <div class="text-center space-y-3">
+                    <p class="text-text-gray text-sm font-medium uppercase tracking-wider">Scroll to explore</p>
+                    <div class="w-6 h-10 border-2 border-white/30 rounded-full mx-auto flex justify-center">
+                        <div class="w-1 h-3 bg-neon-blue rounded-full mt-2 animate-bounce-slow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" data-section="about" style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0a0a0b 0%, #111827 50%, #0a0a0b 100%);">
+            
+            <!-- About Content -->
+            <div style="position: relative; z-index: 10; width: 100%; max-width: 1280px; margin: 0 auto; padding: 2rem;">
+                
+                <h2 style="color: #9ca3af; font-size: 2rem; margin-bottom: 1rem; font-weight: 300;">
+                    Hi, I'm <span style="color: white; font-weight: 600;">T Mohamed Yaser</span> 👋
+                </h2>
+                
+                <h1 style="color: white; font-size: 4rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Full-Stack<br>
+                    Developer
+                </h1>
+                
+                <p style="color: #9ca3af; font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.6; max-width: 600px;">
+                    With a CSE background, I'm honing my frontend & backend skills to build dynamic, responsive web experiences that push the boundaries of what's possible.
+                </p>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div style="background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 25px; padding: 0.5rem 1rem; color: #00d4ff; font-size: 0.875rem;">
+                        🌍 Remote Available
+                    </div>
+                    <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 25px; padding: 0.5rem 1rem; color: #4ade80; font-size: 0.875rem;">
+                        🚀 2+ Years Experience
+                    </div>
+                </div>
+                
+                <div style="background: rgba(17, 24, 39, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.5rem; padding: 2rem; margin-top: 3rem;">
+                    <h3 style="color: #00d4ff; font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; text-transform: uppercase;">
+                        Tech Stack
+                    </h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: white; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">MY PASSION FOR CODING</h4>
+                        <p style="color: #9ca3af; line-height: 1.6;">
+                            I love solving problems and building things through code. Programming isn't just my profession—it's my passion and creative outlet.
+                        </p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: 0.75rem; padding: 1rem; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚛️</div>
+                            <h4 style="color: #93c5fd; font-weight: 600;">React</h4>
+                        </div>
+                        <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 0.75rem; padding: 1rem; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+                            <h4 style="color: #d8b4fe; font-weight: 600;">Next.js</h4>
+                        </div>
+                        <div style="background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(250, 204, 21, 0.3); border-radius: 0.75rem; padding: 1rem; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💛</div>
+                            <h4 style="color: #fde047; font-weight: 600;">JavaScript</h4>
+                        </div>
+                        <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 0.75rem; padding: 1rem; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟢</div>
+                            <h4 style="color: #86efac; font-weight: 600;">Node.js</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="work" data-section="work" class="relative min-h-screen flex items-center justify-center">
+            
+            <!-- Work Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-screen">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-5 space-y-8" data-aos="fade-right" data-aos-duration="800">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 text-sm font-medium text-neon-blue">
+                            <span class="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></span>
+                            Featured Projects
+                        </div>
+                        
+                        <h2 class="text-2xl md:text-3xl font-space font-light text-text-gray">
+                            My <span class="text-white font-semibold">Work</span> 🚀
+                        </h2>
+                        
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-space font-bold leading-tight">
+                            <span class="bg-gradient-to-r from-white via-neon-blue to-neon-cyan bg-clip-text text-transparent">
+                                Projects
+                            </span>
+                            <br>
+                            <span class="text-white">Portfolio</span>
+                        </h1>
+                        
+                        <p class="text-xl text-text-gray font-light max-w-lg leading-relaxed">
+                            Showcasing a collection of projects that demonstrate my skills in full-stack development, AI integration, and modern web technologies.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <button class="bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+                                View All Projects
+                            </button>
+                            <button class="border border-white/20 hover:border-neon-blue text-white hover:text-neon-blue px-8 py-4 rounded-full font-semibold transition-all duration-300">
+                                GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Center space for animation -->
+                <div class="lg:col-span-2"></div>
+                
+                <!-- Right Content -->
+                <div class="lg:col-span-5 space-y-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-3 h-3 bg-neon-blue rounded-full animate-pulse"></div>
+                            <h3 class="text-lg font-space font-semibold text-neon-blue uppercase tracking-wider">
+                                Latest Projects
+                            </h3>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-blue-500/10 border border-blue-400/30 rounded-xl p-6">
+                                <h4 class="text-lg font-semibold text-white mb-2">🚀 AI Energy Analysis Tool</h4>
+                                <p class="text-text-gray text-sm mb-3">Global energy consumption trend analysis using AI/ML technologies - Edunet Foundation Internship</p>
+                                <div class="text-xs text-blue-300">TensorFlow • Streamlit • Python</div>
+                            </div>
+                            
+                            <div class="bg-purple-500/10 border border-purple-400/30 rounded-xl p-6">
+                                <h4 class="text-lg font-semibold text-white mb-2">💻 MMCartons Website</h4>
+                                <p class="text-text-gray text-sm mb-3">Full-stack website development from scratch with modern technologies</p>
+                                <div class="text-xs text-purple-300">React • Node.js • Express</div>
+                            </div>
+                            
+                            <div class="bg-green-500/10 border border-green-400/30 rounded-xl p-6">
+                                <h4 class="text-lg font-semibold text-white mb-2">📊 Shopping Trends Analysis</h4>
+                                <p class="text-text-gray text-sm mb-3">AI/ML project analyzing consumer behavior - Microsoft Internship</p>
+                                <div class="text-xs text-green-300">Machine Learning • Data Analysis</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                    <div class="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 text-sm font-medium text-neon-blue mb-6">
+                        <span class="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></span>
+                        Featured Projects
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-space font-bold text-white mb-6">
+                        My <span class="bg-gradient-to-r from-neon-blue to-neon-cyan bg-clip-text text-transparent">Work</span>
+                    </h1>
+                    <p class="text-xl text-text-gray max-w-3xl mx-auto leading-relaxed">
+                        Showcasing a collection of projects that demonstrate my skills in full-stack development, AI integration, and modern web technologies.
+                    </p>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-item group bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:border-neon-blue/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="project-number bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">01</span>
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <h3 class="text-2xl font-space font-bold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">PredictaStock</h3>
+                        <p class="text-text-gray mb-4 leading-relaxed">AI-Powered Stock Market Predictor using advanced machine learning algorithms</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="project-tech bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                            <span class="project-tech bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-xs font-medium">Streamlit</span>
+                            <span class="project-tech bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">LSTM</span>
+                        </div>
+                        <a href="https://predictastock.streamlit.app/" target="_blank" class="project-link inline-flex items-center gap-2 text-neon-blue hover:text-neon-cyan font-semibold transition-all duration-300 group-hover:translate-x-2">
+                            View Live <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-item group bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:border-neon-blue/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="project-number bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">02</span>
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <h3 class="text-2xl font-space font-bold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">AceInterview</h3>
+                        <p class="text-text-gray mb-4 leading-relaxed">AI-Powered Mock Interview Coach with real-time feedback and analysis</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="project-tech bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                            <span class="project-tech bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-xs font-medium">Gemini API</span>
+                        </div>
+                        <a href="http://aceinterview.vercel.app/" target="_blank" class="project-link inline-flex items-center gap-2 text-neon-blue hover:text-neon-cyan font-semibold transition-all duration-300 group-hover:translate-x-2">
+                            View Live <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-item group bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:border-neon-blue/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="project-number bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">03</span>
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <h3 class="text-2xl font-space font-bold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">Tymo</h3>
+                        <p class="text-text-gray mb-4 leading-relaxed">Modern video sharing platform with seamless user experience</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="project-tech bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-medium">React</span>
+                            <span class="project-tech bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-xs font-medium">YouTube API</span>
+                        </div>
+                        <a href="https://tymo.netlify.app/" target="_blank" class="project-link inline-flex items-center gap-2 text-neon-blue hover:text-neon-cyan font-semibold transition-all duration-300 group-hover:translate-x-2">
+                            View Live <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-item group bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:border-neon-blue/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="project-number bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">04</span>
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <h3 class="text-2xl font-space font-bold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">CinyFlix</h3>
+                        <p class="text-text-gray mb-4 leading-relaxed">Netflix-inspired movie streaming platform with modern UI</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="project-tech bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-medium">React</span>
+                            <span class="project-tech bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-xs font-medium">TMDB API</span>
+                        </div>
+                        <a href="https://cinyflix.netlify.app/" target="_blank" class="project-link inline-flex items-center gap-2 text-neon-blue hover:text-neon-cyan font-semibold transition-all duration-300 group-hover:translate-x-2">
+                            View Live <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-item group bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:border-neon-blue/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="project-number bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">05</span>
+                            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <h3 class="text-2xl font-space font-bold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">InfoZap</h3>
+                        <p class="text-text-gray mb-4 leading-relaxed">AI-powered web scraping platform for intelligent data extraction</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="project-tech bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                            <span class="project-tech bg-violet-500/20 text-violet-300 px-3 py-1 rounded-full text-xs font-medium">Ollama</span>
+                        </div>
+                        <a href="https://github.com/Yaser-123/Infozap" target="_blank" class="project-link inline-flex items-center gap-2 text-neon-blue hover:text-neon-cyan font-semibold transition-all duration-300 group-hover:translate-x-2">
+                            View Code <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-item group bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-6 hover:border-neon-blue/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="project-number bg-neon-blue/20 text-neon-blue px-3 py-1 rounded-full text-sm font-bold">06</span>
+                            <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <h3 class="text-2xl font-space font-bold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">ShopSmart Analytics</h3>
+                        <p class="text-text-gray mb-4 leading-relaxed">Advanced consumer behavior analysis using machine learning</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="project-tech bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-medium">Python</span>
+                            <span class="project-tech bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-xs font-medium">ML</span>
+                            <span class="project-tech bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-medium">Data Analysis</span>
+                        </div>
+                        <a href="#" target="_blank" class="project-link inline-flex items-center gap-2 text-text-gray hover:text-neon-cyan font-semibold transition-all duration-300">
+                            Coming Soon <i class="fas fa-clock"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section -->
+        <section id="experience" data-section="experience" style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0a0a0b 0%, #111827 50%, #0a0a0b 100%);">
+            
+            <!-- Experience Content -->
+            <div style="position: relative; z-index: 10; width: 100%; max-width: 1280px; margin: 0 auto; padding: 2rem;">
+                
+                <h2 style="color: #9ca3af; font-size: 2rem; margin-bottom: 1rem; font-weight: 300;">
+                    Professional <span style="color: white; font-weight: 600;">Journey</span> 💼
+                </h2>
+                
+                <h1 style="color: white; font-size: 4rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Experience<br>
+                    & Skills
+                </h1>
+                
+                <p style="color: #9ca3af; font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.6; max-width: 600px;">
+                    2+ Years of professional experience in full-stack development, AI/ML technologies, and modern web frameworks.
+                </p>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <button style="background: linear-gradient(to right, #00d4ff, #2563eb); color: white; padding: 1rem 2rem; border-radius: 25px; font-weight: 600; border: none; cursor: pointer;">
+                        Download Resume
+                    </button>
+                    <button style="background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 1rem 2rem; border-radius: 25px; font-weight: 600; cursor: pointer;">
+                        LinkedIn
+                    </button>
+                </div>
+                
+                <div style="background: rgba(17, 24, 39, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.5rem; padding: 2rem; margin-top: 3rem;">
+                    <h3 style="color: #00d4ff; font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; text-transform: uppercase;">
+                        Work History
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 0.75rem; padding: 1.5rem;">
+                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">💻 MMCartons</h4>
+                            <p style="color: #4ade80; font-size: 0.875rem; margin-bottom: 0.5rem;">Web Developer & Designer</p>
+                            <p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 0.75rem;">August 2024 – January 2025</p>
+                            <div style="color: #86efac; font-size: 0.75rem;">Full-stack development • UI/UX Design</div>
+                        </div>
+                        
+                        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: 0.75rem; padding: 1.5rem;">
+                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">🎓 Edunet Foundation</h4>
+                            <p style="color: #60a5fa; font-size: 0.875rem; margin-bottom: 0.5rem;">AICTE Intern</p>
+                            <p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 0.75rem;">December 2024 – January 2025</p>
+                            <div style="color: #93c5fd; font-size: 0.75rem;">AI Technologies • Energy Analysis</div>
+                        </div>
+                        
+                        <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 0.75rem; padding: 1.5rem;">
+                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">🚀 Microsoft</h4>
+                            <p style="color: #a78bfa; font-size: 0.875rem; margin-bottom: 0.5rem;">AICTE Intern</p>
+                            <p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 0.75rem;">November – December 2024</p>
+                            <div style="color: #d8b4fe; font-size: 0.75rem;">AI/ML • Data Analysis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Work Experience -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="800">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 text-sm font-medium text-neon-blue">
+                            <span class="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></span>
+                            Work Experience
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-space font-bold text-white">
+                            Professional <span class="bg-gradient-to-r from-neon-blue to-neon-cyan bg-clip-text text-transparent">Journey</span>
+                        </h1>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="experience-item bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:border-neon-blue/30 transition-all duration-300">
+                            <h3 class="text-xl font-space font-bold text-white mb-2">MMCartons</h3>
+                            <p class="text-neon-blue font-semibold mb-2">Web Developer & Designer</p>
+                            <div class="text-sm text-text-gray font-medium mb-3 bg-green-500/10 border border-green-400/30 rounded-full px-3 py-1 inline-block">August 2024 – January 2025</div>
+                            <p class="text-text-gray leading-relaxed">Developed website from scratch, managing UI/UX to full-stack development with modern technologies.</p>
+                        </div>
+                        
+                        <div class="experience-item bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:border-neon-blue/30 transition-all duration-300">
+                            <h3 class="text-xl font-space font-bold text-white mb-2">Edunet Foundation</h3>
+                            <p class="text-neon-blue font-semibold mb-2">AICTE Intern</p>
+                            <div class="text-sm text-text-gray font-medium mb-3 bg-blue-500/10 border border-blue-400/30 rounded-full px-3 py-1 inline-block">December 2024 – January 2025</div>
+                            <p class="text-text-gray leading-relaxed">Developed global energy consumption trend analysis tool using AI technologies.</p>
+                        </div>
+                        
+                        <div class="experience-item bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:border-neon-blue/30 transition-all duration-300">
+                            <h3 class="text-xl font-space font-bold text-white mb-2">Microsoft</h3>
+                            <p class="text-neon-blue font-semibold mb-2">AICTE Intern</p>
+                            <div class="text-sm text-text-gray font-medium mb-3 bg-purple-500/10 border border-purple-400/30 rounded-full px-3 py-1 inline-block">November – December 2024</div>
+                            <p class="text-text-gray leading-relaxed">Developed Shopping Trends Analysis AI/ML project analyzing consumer behavior.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skills & Achievements -->
+                <div class="space-y-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 space-y-6">
+                        <h3 class="text-xl font-space font-bold text-neon-blue uppercase tracking-wider">Technical Skills</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="skill-group">
+                                <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-3">
+                                    <span class="text-2xl">🚀</span>
+                                    Frontend Development
+                                </h3>
+                                <p class="text-text-gray mb-2">React.js, Next.js, JavaScript, HTML5, CSS3, TailwindCSS</p>
+                                <div class="text-sm text-neon-blue font-medium bg-neon-blue/10 border border-neon-blue/30 rounded-full px-3 py-1 inline-block">2+ Years Experience</div>
+                            </div>
+                            
+                            <div class="skill-group">
+                                <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-3">
+                                    <span class="text-2xl">⚡</span>
+                                    Backend Development
+                                </h3>
+                                <p class="text-text-gray mb-2">Node.js, Express.js, Python, REST APIs</p>
+                                <div class="text-sm text-green-400 font-medium bg-green-500/10 border border-green-400/30 rounded-full px-3 py-1 inline-block">API Integration</div>
+                            </div>
+                            
+                            <div class="skill-group">
+                                <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-3">
+                                    <span class="text-2xl">🤖</span>
+                                    AI/ML Technologies
+                                </h3>
+                                <p class="text-text-gray mb-2">TensorFlow, Streamlit, LSTM, Gemini API, Ollama</p>
+                                <div class="text-sm text-purple-400 font-medium bg-purple-500/10 border border-purple-400/30 rounded-full px-3 py-1 inline-block">Machine Learning</div>
+                            </div>
+                            
+                            <div class="skill-group">
+                                <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-3">
+                                    <span class="text-2xl">🛠️</span>
+                                    Tools & Platforms
+                                </h3>
+                                <p class="text-text-gray mb-2">Git, GitHub, Vercel, Netlify, VS Code</p>
+                                <div class="text-sm text-orange-400 font-medium bg-orange-500/10 border border-orange-400/30 rounded-full px-3 py-1 inline-block">DevOps & Deployment</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Achievements -->
+                    <div class="bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 space-y-6">
+                        <h3 class="text-xl font-space font-bold text-neon-blue uppercase tracking-wider">Achievements</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <span class="text-2xl">🏆</span>
+                                <div>
+                                    <h4 class="font-semibold text-white">AI Technologies Certificate</h4>
+                                    <p class="text-sm text-text-gray">Green Skills with AI - AICTE & Edunet Foundation</p>
+                                    <span class="text-xs text-neon-blue">January 2025</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <span class="text-2xl">🚀</span>
+                                <div>
+                                    <h4 class="font-semibold text-white">Microsoft Intern</h4>
+                                    <p class="text-sm text-text-gray">AI: Transformative Learning Program</p>
+                                    <span class="text-xs text-neon-blue">December 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" data-section="contact" style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0a0a0b 0%, #111827 50%, #0a0a0b 100%);">
+            
+            <!-- Contact Content -->
+            <div style="position: relative; z-index: 10; width: 100%; max-width: 1280px; margin: 0 auto; padding: 2rem;">
+                
+                <h2 style="color: #9ca3af; font-size: 2rem; margin-bottom: 1rem; font-weight: 300;">
+                    Let's <span style="color: white; font-weight: 600;">Connect</span> 📧
+                </h2>
+                
+                <h1 style="color: white; font-size: 4rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Contact<br>
+                    Me
+                </h1>
+                
+                <p style="color: #9ca3af; font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.6; max-width: 600px;">
+                    Ready to discuss your next project? Let's work together to create something amazing. I'm always excited to take on new challenges.
+                </p>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <button style="background: linear-gradient(to right, #00d4ff, #2563eb); color: white; padding: 1rem 2rem; border-radius: 25px; font-weight: 600; border: none; cursor: pointer;">
+                        Send Message
+                    </button>
+                    <button style="background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 1rem 2rem; border-radius: 25px; font-weight: 600; cursor: pointer;">
+                        Email Me
+                    </button>
+                </div>
+                
+                <div style="background: rgba(17, 24, 39, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1.5rem; padding: 2rem; margin-top: 3rem;">
+                    <h3 style="color: #00d4ff; font-size: 1.125rem; font-weight: 600; margin-bottom: 1.5rem; text-transform: uppercase;">
+                        Contact Info
+                    </h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: 0.75rem; padding: 1.5rem;">
+                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">📧 Email</h4>
+                            <p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 0.75rem;">Ready to discuss your project ideas</p>
+                            <div style="color: #93c5fd; font-size: 0.75rem;">yaser@example.com</div>
+                        </div>
+                        
+                        <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 0.75rem; padding: 1.5rem;">
+                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">💼 LinkedIn</h4>
+                            <p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 0.75rem;">Let's connect professionally</p>
+                            <div style="color: #d8b4fe; font-size: 0.75rem;">linkedin.com/in/yaser</div>
+                        </div>
+                        
+                        <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 0.75rem; padding: 1.5rem;">
+                            <h4 style="color: white; font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">🌍 Location</h4>
+                            <p style="color: #9ca3af; font-size: 0.875rem; margin-bottom: 0.75rem;">Available for remote work worldwide</p>
+                            <div style="color: #86efac; font-size: 0.75rem;">South Asia • Remote Friendly</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                    <div class="inline-flex items-center gap-2 bg-neon-blue/10 border border-neon-blue/30 rounded-full px-4 py-2 text-sm font-medium text-neon-blue mb-6">
+                        <span class="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></span>
+                        Let's Work Together
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-space font-bold text-white mb-6">
+                        Get In <span class="bg-gradient-to-r from-neon-blue to-neon-cyan bg-clip-text text-transparent">Touch</span>
+                    </h1>
+                    <p class="text-xl text-text-gray max-w-3xl mx-auto leading-relaxed">
+                        Whether you're looking to build a new website, improve your existing platform, or bring a unique project to life, I'm here to help.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-8" data-aos="fade-right" data-aos-duration="800">
+                        <div class="bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8 space-y-8">
+                            <div class="space-y-6">
+                                <div class="contact-item flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl hover:border-neon-blue/30 transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-neon-blue/20 rounded-xl flex items-center justify-center group-hover:bg-neon-blue/30 transition-colors duration-300">
+                                        <i class="fas fa-envelope text-neon-blue text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-text-gray uppercase tracking-wider">Email</p>
+                                        <span class="text-white font-semibold">1ammar.yaser@gmail.com</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl hover:border-neon-blue/30 transition-all duration-300 group">
+                                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center group-hover:bg-green-500/30 transition-colors duration-300">
+                                        <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-text-gray uppercase tracking-wider">WhatsApp</p>
+                                        <span class="text-white font-semibold">+91 93901 76961</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-t border-white/10 pt-6">
+                                <h4 class="text-lg font-space font-semibold text-white mb-4">Connect With Me</h4>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/Yaser-123" target="_blank" class="w-12 h-12 bg-gray-500/20 hover:bg-gray-500/30 border border-gray-400/30 hover:border-gray-400/60 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group">
+                                        <i class="fab fa-github text-gray-300 group-hover:text-white text-xl"></i>
+                                    </a>
+                                    <a href="https://x.com/tmohamedyaser" target="_blank" class="w-12 h-12 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-400/30 hover:border-blue-400/60 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group">
+                                        <i class="fab fa-twitter text-blue-300 group-hover:text-blue-200 text-xl"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/tmohamedyaser/" target="_blank" class="w-12 h-12 bg-pink-500/20 hover:bg-pink-500/30 border border-pink-400/30 hover:border-pink-400/60 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group">
+                                        <i class="fab fa-instagram text-pink-300 group-hover:text-pink-200 text-xl"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/mohamedyaser08/" target="_blank" class="w-12 h-12 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 hover:border-blue-500/60 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 group">
+                                        <i class="fab fa-linkedin text-blue-400 group-hover:text-blue-300 text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <button id="download-resume-contact" class="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue text-white px-6 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/25 flex items-center justify-center gap-3">
+                                <i class="fas fa-download"></i>
+                                <span>Download Resume</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="space-y-8" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                        <div class="bg-card-bg/50 backdrop-blur-lg border border-white/10 rounded-3xl p-8">
+                            <form id="portfolio-contact-form" class="space-y-6">
+                                <div class="form-group">
+                                    <label for="name" class="block text-sm font-semibold text-white mb-2">Name *</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-text-gray focus:outline-none focus:border-neon-blue focus:bg-white/10 transition-all duration-300" placeholder="Your full name">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="block text-sm font-semibold text-white mb-2">Email *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-text-gray focus:outline-none focus:border-neon-blue focus:bg-white/10 transition-all duration-300" placeholder="your.email@example.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="block text-sm font-semibold text-white mb-2">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-text-gray focus:outline-none focus:border-neon-blue focus:bg-white/10 transition-all duration-300" placeholder="Project discussion">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="block text-sm font-semibold text-white mb-2">Message *</label>
+                                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-text-gray focus:outline-none focus:border-neon-blue focus:bg-white/10 transition-all duration-300 resize-none" placeholder="Tell me about your project..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-neon-blue/25 flex items-center justify-center gap-3 group">
+                                    <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    <span>Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <footer id="footer" class="text-center mt-16 pt-8 border-t border-white/10">
+                    <p class="text-text-gray">&copy; 2025 T Mohamed Yaser. All rights reserved. Crafted with ❤️ and code.</p>
+                </footer>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Modern Chatbot -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <button id="chatbot-toggle" class="w-16 h-16 bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue rounded-full shadow-lg hover:shadow-xl hover:shadow-neon-blue/25 flex items-center justify-center text-white text-xl transition-all duration-300 hover:scale-110 group">
+            <i class="fas fa-comment-dots group-hover:scale-110 transition-transform duration-300"></i>
+        </button>
+        
+        <div id="chatbot-window" class="absolute bottom-20 right-0 w-96 h-[500px] bg-card-bg/95 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl shadow-black/20 hidden flex-col overflow-hidden">
+            <div class="chatbot-header bg-gradient-to-r from-neon-blue/20 to-blue-600/20 border-b border-white/10 p-6 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-neon-blue/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-robot text-neon-blue"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-space font-bold">Ask Me Anything</h4>
+                        <p class="text-text-gray text-sm">I'm here to help!</p>
+                    </div>
+                </div>
+                <button id="chatbot-close" class="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-text-gray hover:text-white transition-all duration-300">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-body flex-1 p-6 overflow-y-auto space-y-4">
+                <div class="chat-message flex gap-3">
+                    <div class="message-avatar w-8 h-8 bg-neon-blue/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-neon-blue text-sm"></i>
+                    </div>
+                    <div class="message-content bg-white/10 backdrop-blur-lg rounded-2xl rounded-bl-sm px-4 py-3 max-w-[250px]">
+                        <p class="text-white text-sm leading-relaxed">Hi! I'm Yaser's AI assistant. Feel free to ask me anything about his work, skills, or projects!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input p-6 border-t border-white/10">
+                <div class="flex gap-3">
+                    <input type="text" placeholder="Type your message..." id="chatbot-message-input" class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-text-gray focus:outline-none focus:border-neon-blue transition-all duration-300">
+                    <button id="send-message" class="w-12 h-12 bg-gradient-to-r from-neon-blue to-blue-600 hover:from-neon-cyan hover:to-neon-blue rounded-2xl flex items-center justify-center text-white transition-all duration-300 hover:scale-105 group">
+                        <i class="fas fa-paper-plane group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
