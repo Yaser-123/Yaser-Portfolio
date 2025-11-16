@@ -762,6 +762,33 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
 }
 
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.95), rgba(0, 153, 204, 0.95));
+    color: var(--bg-dark);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    z-index: 10000;
+    transition: all 0.3s ease;
+}
+
+.toast-notification.show {
+    top: 2rem;
+}
+
+.toast-notification i {
+    font-size: 1.25rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .center-image-fixed {

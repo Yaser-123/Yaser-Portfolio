@@ -803,3 +803,44 @@ chatbotInput.addEventListener('keypress', function(e) {
         sendChatMessage();
     }
 });
+
+// Contact Form Toast Notification
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show success toast
+        showToast('Message sent successfully! I\'ll get back to you soon. 🎉');
+        
+        // Reset form
+        contactForm.reset();
+    });
+}
+
+function showToast(message) {
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.innerHTML = `
+        <i class="fas fa-check-circle"></i>
+        <span>${message}</span>
+    `;
+    
+    // Add to body
+    document.body.appendChild(toast);
+    
+    // Trigger animation
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 100);
+    
+    // Remove after 4 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 4000);
+}
