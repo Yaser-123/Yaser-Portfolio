@@ -88,6 +88,33 @@ nav {
     color: var(--primary-color);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.resume-btn {
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 212, 255, 0.1);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.resume-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+}
+
 .cta-btn {
     background: var(--primary-color);
     color: var(--bg-dark);
@@ -481,44 +508,12 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
-/* Download Resume Floating Button */
-.download-resume-floating {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 999;
-    background: linear-gradient(135deg, var(--primary-color), #0099cc);
-    color: var(--bg-dark);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
-    transition: all 0.3s;
-}
-
-.download-resume-floating:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
-}
-
-.download-resume-floating i {
-    font-size: 1rem;
-}
-
-.download-resume-floating span {
-    font-size: 0.95rem;
-}
-
 /* Chatbot Widget */
 #chatbot-widget {
     position: fixed;
     bottom: 2rem;
-    left: 2rem;
-    z-index: 999;
+    right: 2rem;
+    z-index: 1000;
 }
 
 .chatbot-toggle {
@@ -542,8 +537,9 @@ footer {
 .chatbot-window {
     position: absolute;
     bottom: 80px;
-    left: 0;
-    width: 380px;
+    right: 0;
+    width: 400px;
+    max-width: 90vw;
     height: 550px;
     background: rgba(10, 10, 10, 0.98);
     backdrop-filter: blur(20px);
@@ -694,6 +690,37 @@ footer {
     border-radius: 15px 15px 15px 0;
 }
 
+.typing-indicator .message-content {
+    display: flex;
+    gap: 0.3rem;
+    padding: 1rem;
+}
+
+.typing-indicator .message-content span {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: typing-bounce 1.4s infinite;
+}
+
+.typing-indicator .message-content span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator .message-content span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-bounce {
+    0%, 60%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+}
+
 .chatbot-input {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.03);
@@ -753,21 +780,23 @@ footer {
         padding: 4rem 1rem;
     }
     
-    .download-resume-floating {
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.75rem 1.25rem;
+    .nav-actions {
+        gap: 0.5rem;
+    }
+    
+    .resume-btn,
+    .cta-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
     
     .chatbot-window {
         width: calc(100vw - 2rem);
-        left: 50%;
-        transform: translateX(-50%);
+        right: 1rem;
         bottom: 80px;
     }
     
     #chatbot-widget {
-        left: 50%;
-        transform: translateX(-50%);
+        right: 1rem;
     }
 }

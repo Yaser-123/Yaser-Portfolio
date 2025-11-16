@@ -683,11 +683,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Download Resume Button Functionality
-document.getElementById('download-resume-btn').addEventListener('click', function(e) {
+document.getElementById('download-resume-nav').addEventListener('click', function(e) {
     e.preventDefault();
-    alert('Resume download will be available soon! Please contact via email: 1ammar.yaser@gmail.com');
-    // When you have a resume PDF, uncomment and update this:
-    // window.open('path/to/your-resume.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = 'T_Mohamed_Yaser_Resume.pdf';
+    link.download = 'T_Mohamed_Yaser_Resume.pdf';
+    link.click();
 });
 
 // Chatbot Functionality
@@ -711,7 +712,7 @@ chatbotClose.addEventListener('click', function() {
 });
 
 // Send message function
-function sendChatMessage() {
+async function sendChatMessage() {
     const message = chatbotInput.value.trim();
     if (!message) return;
     
@@ -719,11 +720,29 @@ function sendChatMessage() {
     addMessage(message, 'user');
     chatbotInput.value = '';
     
-    // Simulate bot response
-    setTimeout(() => {
-        const botResponse = getBotResponse(message);
+    // Add typing indicator
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'bot-message typing-indicator';
+    typingDiv.innerHTML = `
+        <div class="message-avatar">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="message-content">
+            <span>.</span><span>.</span><span>.</span>
+        </div>
+    `;
+    chatbotMessages.appendChild(typingDiv);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    
+    try {
+        const botResponse = await getBotResponse(message);
+        // Remove typing indicator
+        typingDiv.remove();
         addMessage(botResponse, 'bot');
-    }, 800);
+    } catch (error) {
+        typingDiv.remove();
+        addMessage('Sorry, I encountered an error. Please try again or contact directly at 1ammar.yaser@gmail.com', 'bot');
+    }
 }
 
 // Add message to chat
@@ -746,27 +765,28 @@ function addMessage(text, sender) {
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
 
-// Get bot response based on user input
-function getBotResponse(message) {
-    const lowerMsg = message.toLowerCase();
+// Get bot response from Lyzr API
+async function getBotResponse(message) {
+    const response = await fetch('https://agent-prod.studio.lyzr.ai/v3/inference/chat/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'sk-default-mpA4zDHQ88wREItifLuzFJIm0bMff3np'
+        },
+        body: JSON.stringify({
+            user_id: '1ammar.yaser@gmail.com',
+            agent_id: '69196e915848af7d875ae71d',
+            session_id: '69196e915848af7d875ae71d-5jpnrcqlzjj',
+            message: message
+        })
+    });
     
-    if (lowerMsg.includes('skill') || lowerMsg.includes('technology') || lowerMsg.includes('tech stack')) {
-        return "Yaser specializes in React, Next.js, JavaScript, TypeScript, Node.js, Python, and AI/ML technologies. He has 2+ years of experience in full-stack development.";
-    } else if (lowerMsg.includes('experience') || lowerMsg.includes('work')) {
-        return "Yaser has worked as a Web Developer at MMCartons and completed internships at Microsoft and Edunet Foundation, focusing on AI/ML projects and full-stack development.";
-    } else if (lowerMsg.includes('project')) {
-        return "Some of his notable projects include PredictaStock (AI stock predictor), AceInterview (AI interview coach), Tymo (video platform), and CinyFlix (streaming platform). Check out the Work section!";
-    } else if (lowerMsg.includes('contact') || lowerMsg.includes('email') || lowerMsg.includes('hire')) {
-        return "You can reach Yaser at 1ammar.yaser@gmail.com or via WhatsApp at +91 93901 76961. He's available for remote work worldwide!";
-    } else if (lowerMsg.includes('education') || lowerMsg.includes('degree')) {
-        return "Yaser has a CSE (Computer Science Engineering) background and has completed multiple certifications in AI technologies from AICTE programs.";
-    } else if (lowerMsg.includes('hello') || lowerMsg.includes('hi') || lowerMsg.includes('hey')) {
-        return "Hello! 👋 I'm here to help you learn about Yaser's skills, experience, and projects. What would you like to know?";
-    } else if (lowerMsg.includes('thank')) {
-        return "You're welcome! Feel free to reach out to Yaser directly if you have any specific questions or opportunities.";
-    } else {
-        return "That's a great question! For detailed information, feel free to explore the portfolio sections or contact Yaser directly at 1ammar.yaser@gmail.com.";
+    if (!response.ok) {
+        throw new Error('Failed to get response from AI assistant');
     }
+    
+    const data = await response.json();
+    return data.response || data.message || 'Sorry, I could not process that. Please try again.';
 }
 
 // Send message on button click
