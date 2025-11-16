@@ -188,7 +188,12 @@ function scaleImage(img, ctx) {
   // Use contain instead of cover to show full image
   var hRatio = cssWidth / img.width;
   var vRatio = cssHeight / img.height;
-  var ratio = Math.min(hRatio, vRatio); // Changed from Math.max to Math.min
+  var ratio = Math.min(hRatio, vRatio);
+  
+  // On mobile, increase the scale for larger display
+  if (window.innerWidth <= 768) {
+    ratio = ratio * 1.2; // 20% larger on mobile
+  }
   
   var centerShift_x = Math.round((cssWidth - img.width * ratio) / 2);
   var centerShift_y = Math.round((cssHeight - img.height * ratio) / 2);
